@@ -1,1 +1,48 @@
+/* == General Scroll == */
+.scrollBg{
+    position: absolute;
+    inset: 0;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+/* == Open Wrapper == */
+.scroll__openWrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.scroll__openButton{
+    border: solid var(--) 1px;
+}
 /* == Scroll inner == */
+.invitation__scrollInner{
+    overflow: hidden;
+    transform: translateY(-20px);
+}
+.invitation__scrollInner{
+    height: 500px;
+    transition: height .5s ease-in;
+}
+.invitation__scrollInner.rolled{
+    height: calc(var(--spacing) * 15);
+}
+.invitation__scrollContent{
+    opacity: 1;
+    transition: opacity .2s ease-in .5s;
+    padding: calc(var(--spacing) * 8) calc(var(--spacing) * 4);
+}
+.rolled .invitation__scrollContent{
+    opacity: 0;
+    transition-delay: 0s;
+}
+.invitation__close{
+    position: absolute;
+    top: calc(var(--spacing) * 4);
+    right: calc(var(--spacing) * 4);
+}
+/* == Scroll Bottom == */
+.invitation__scrollBottom{
+    transform: translateY(-60px);
+}
