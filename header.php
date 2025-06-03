@@ -3,6 +3,16 @@
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            @theme {
+                --color-night: #151515;
+                --color-plum: #22133A;
+                --color-wine: #500E31;
+                --color-rose: #FFDDE1;
+                --color-cream: #FFFFEB;
+            }
+            </style>
         <?php wp_head(); ?>
         <!-- ========== Cham & Jordan 4-ever <3 ========== -->
     </head>
