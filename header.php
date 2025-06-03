@@ -22,10 +22,21 @@
                         <?php bloginfo( 'description' ); ?>
                     </div>
                 </div>
+                <?php
+                    // getting the hide menu variable
+                    global $TD__hideMenu;
+                    // if it's set
+                    if(isset($TD__hideMenu) && $TD__hideMenu){
+
+                    } else {
+                    ?>
                 <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
                     <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
-                    <div id="search"><?php get_search_form(); ?></div>
                 </nav>
+                    <?php
+                    }
+                ?>
+                
             </header>
             <div id="container">
                 <main id="content" role="main">
