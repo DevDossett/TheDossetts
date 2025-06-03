@@ -14,7 +14,13 @@ function TD__setup() {
     if ( !isset( $content_width ) ) { 
         $content_width = 1920; 
     }
-    register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'TD_' ) ) );
+    register_nav_menus( 
+        array( 
+            'main-menu' => esc_html__( 'Main Menu', 'TD_' ), 
+            'footer_menu'  => __( 'Footer Menu', 'text_domain' ) 
+        ) 
+    );
+
 }
 // adding the action
 add_action( 'after_setup_theme', 'TD__setup' );
