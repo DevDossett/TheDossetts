@@ -17,7 +17,7 @@ function TD__setup() {
     register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'TD_' ) ) );
 }
 // adding the action
-add_action( 'after_setup_theme', 'blankslate_setup' );
+add_action( 'after_setup_theme', 'TD__setup' );
 // ============================================================================
 // Admin Notice ===============================================================
 function TD__notice() {
